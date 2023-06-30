@@ -96,3 +96,8 @@ if impl(ghc >= 9.6)
   constraints:
       -- Earlier versions have a slightly different set of type constraints.
       persistent >= 2.14
+
+source-repository-package
+  type: git
+  location: https://github.com/haskell-streaming/streaming-bytestring
+  tag: dec50d63d43b9101c1f1aa8d6fbc48e4f3069ab2

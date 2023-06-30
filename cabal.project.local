@@ -1,0 +1,6 @@
+package cardano-crypto-praos 
+  flags: -external-libsodium-vrf 
+package cardano-ledger-core
+  flags: -ticky
+package cardano-ledger-test
+  flags: -ticky

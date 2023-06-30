@@ -5,6 +5,7 @@
 {-# LANGUAGE TypeApplications #-}
 -- Embed instances for (AlonzoEra TestCrypto)
 {-# OPTIONS_GHC -fno-warn-orphans #-}
+{-# OPTIONS_GHC -ticky #-}
 
 {-
 nix develop .#profiling

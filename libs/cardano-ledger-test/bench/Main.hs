@@ -1,3 +1,5 @@
+{-# OPTIONS_GHC -ticky #-}
+
 module Main where
 
 import qualified Bench.Cardano.Ledger.ApplyTx as ApplyTx
