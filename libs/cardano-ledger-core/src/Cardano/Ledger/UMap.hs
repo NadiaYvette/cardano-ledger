@@ -991,8 +991,10 @@ findWithDefault def k = fromMaybe def . lookup k
 -- the underlying `UMElem` map.
 size :: UView c k v -> Int
 size = \case
-  PtrUView UMap {umPtrs} -> Map.size umPtrs
-  x -> foldl' (\count _v -> count + 1) 0 x
+  PtrUView    UMap {umPtrs}  -> Map.size umPtrs
+  SPoolUView  UMap {umElems} -> Map.foldl' (\count v -> if isJust $ umElemSPool v then count + 1 else count) 0 umElems
+  DRepUView   UMap {umElems} -> Map.foldl' (\count v -> if isJust $ umElemDRep v then count + 1 else count) 0 umElems
+  RewDepUView UMap {umElems} -> Map.foldl' (\count v -> if isJust $ umElemRDPair v then count + 1 else count) 0 umElems
 
 -- | Create a UMap from 4 separate maps. NOTE: For use in tests only.
 unify ::
