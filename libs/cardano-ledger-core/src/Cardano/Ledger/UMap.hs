@@ -123,7 +123,7 @@ import Data.Foldable (Foldable (..))
 import Data.Map.Strict (Map)
 import qualified Data.Map.Strict as Map
 import Data.MapExtras (intersectDomPLeft)
-import Data.Maybe as Maybe (fromMaybe, isNothing, mapMaybe)
+import Data.Maybe as Maybe (fromMaybe, isJust, isNothing, mapMaybe)
 import Data.Maybe.Strict (StrictMaybe (..))
 import Data.Set (Set)
 import qualified Data.Set as Set
