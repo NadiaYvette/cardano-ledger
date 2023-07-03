@@ -18,6 +18,7 @@ run_ledger()
                                 --benchmark-options="+RTS -r$GHC.ticky"
                         ;;
                 test)   $CABAL -v --enable-nix --disable-doc           \
+                                --with-compiler=$TOOLPATH/$GHC         \
                                 run cardano-ledger-core:test:tests     \
                                 -- +RTS -r$GHC.ticky
                         ;;
@@ -35,10 +36,10 @@ run_ledger()
 
 run_ledger  test   8.10.7
 run_ledger  test   9.2.8
+run_ledger  test   9.6.2
 
 run_ledger  bench  8.10.7
 run_ledger  bench  9.2.8
-
-run_ledger  test   9.6.2
 run_ledger  bench  9.6.2
+
 exit 0

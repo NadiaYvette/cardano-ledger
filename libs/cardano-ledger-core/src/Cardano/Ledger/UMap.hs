@@ -12,7 +12,7 @@
 {-# LANGUAGE PatternSynonyms #-}
 {-# LANGUAGE TypeFamilies #-}
 {-# LANGUAGE ViewPatterns #-}
-{-# OPTIONS_GHC -ticky #-}
+{-# OPTIONS_GHC -ticky -ddump-to-file -ddump-stg-final #-}
 
 -- | A 'UMap' (for Unified map) represents
 --

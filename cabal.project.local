@@ -1,6 +1,6 @@
 package cardano-crypto-praos 
   flags: -external-libsodium-vrf 
 package cardano-ledger-core
-  flags: -ticky
+  flags: -ddump-to-file -ddump-stg-final -ticky -dppr-debug
 package cardano-ledger-test
-  flags: -ticky
+  flags: -ddump-to-file -ddump-stg-final -ticky -dppr-debug
